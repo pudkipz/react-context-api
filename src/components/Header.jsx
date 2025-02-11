@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../App';
 
-export default function Header({ user }) {
+export default function Header() {
   const context = useContext(AppContext)
 
   const handleCheckChange = () => {
@@ -97,11 +97,11 @@ export default function Header({ user }) {
       <button className="tweet-btn">Tweet</button>
 
       <div className={context.theme === 'dark' ? 'profile-card dark' : 'profile-card'}>
-        <div className="profile-icon"><img src={user.profileImage}/></div>
+        <div className="profile-icon"><img src={context.user.profileImage}/></div>
 
         <div className="profile-details">
-          <h4>{user.name}</h4>
-          <small>{user.handle}</small>
+          <h4>{context.user.name}</h4>
+          <small>{context.user.handle}</small>
         </div>
 
         <div className="action">

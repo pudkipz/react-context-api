@@ -20,8 +20,8 @@ function App() {
   return (
     <AppContext.Provider value={{user, theme, setTheme, tweets, setTweets}}>
       <div className="container">
-        <Header user={user} />
-        <Tweets user={user}  />
+        <Header />
+        <Tweets />
         <RightSide />
       </div>
     </AppContext.Provider>

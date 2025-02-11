@@ -5,7 +5,7 @@ import { AppContext } from '../App'
 
 
 
-export default function Tweets({ user }) {
+export default function Tweets() {
   const context = useContext(AppContext)
   return (
     <main>
@@ -13,7 +13,7 @@ export default function Tweets({ user }) {
         <h2 className="title">Home</h2>
       </div>
 
-      <CreateTweet user={user} />
+      <CreateTweet />
 
       <div className="show-more-context.tweets">
         <p>Show 35 Tweets</p>
