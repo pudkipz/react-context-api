@@ -5,7 +5,6 @@ export default function Header() {
   const context = useContext(AppContext)
 
   const handleCheckChange = () => {
-    console.log('helllooooooo')
     if (context.theme === 'dark') {
       context.setTheme('light');
       localStorage.setItem('theme', 'light')
@@ -16,7 +15,6 @@ export default function Header() {
   }
 
   const handleButtonClick = () => {
-    // console.log("CLICK!");
     localStorage.clear()
     context.setTheme('light')
   }
