@@ -5,7 +5,7 @@ import { AppContext } from '../App'
 
 
 
-export default function Tweets({ tweets, setTweets, user }) {
+export default function Tweets({ user }) {
   const context = useContext(AppContext)
   return (
     <main>
@@ -13,13 +13,13 @@ export default function Tweets({ tweets, setTweets, user }) {
         <h2 className="title">Home</h2>
       </div>
 
-      <CreateTweet tweets={tweets} setTweets={setTweets} user={user} />
+      <CreateTweet user={user} />
 
-      <div className="show-more-tweets">
+      <div className="show-more-context.tweets">
         <p>Show 35 Tweets</p>
       </div>
 
-      {tweets.map((tweet, index) => <Tweet tweet={tweet} key={index} />)}
+      {context.tweets.map((tweet, index) => <Tweet tweet={tweet} key={index} />)}
     </main>
   )
 }

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../App';
 
-export default function Header({ user}) {
+export default function Header({ user }) {
   const context = useContext(AppContext)
 
   const handleCheckChange = () => {
